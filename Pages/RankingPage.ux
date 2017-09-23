@@ -1,0 +1,16 @@
+<Page ux:Class="RankingPage">
+  <JavaScript File="RankingPage.js" />
+
+  <ScrollView>
+    <StackPanel>
+
+      <Each Items="{ranking}">
+        <Grid ColumnCount="2" Columns="7*,3*">
+          <Text Value="{name}"/>
+          <Text Value="{defeats}" Alignment="Center"/>
+        </Grid>
+      </Each>
+
+    </StackPanel>
+  </ScrollView>
+</Page>

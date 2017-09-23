@@ -1,2 +1,7 @@
 <App>
+	<ClientPanel>
+		<Navigator DefaultPath="ranking">
+			<RankingPage ux:Template="ranking"/>
+	</Navigator>
+	</ClientPanel>
 </App>
