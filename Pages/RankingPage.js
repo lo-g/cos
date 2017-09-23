@@ -2,18 +2,32 @@ var Observable = require("FuseJS/Observable");
 var API = require("Modules/api");
 
 var ranking = Observable();
+var isLoading = Observable(false);
 
 function refreshRanking() {
-  /*
 	API.getRanking().then(function(newRanking) {
-		ranking.replaceAll(newRanking);
+		ranking.replaceAll(newRanking['result']);
 	});
-  */
-  ranking =  API.getRanking()['result'];
 }
+
+function endLoading(){
+  isLoading.value = false;
+
+}
+
+function reloadHandler(){
+  refreshRanking();
+  isLoading.value = true;
+  setTimeout(endLoading, 3000);
+}
+
 refreshRanking();
+
+
 
 module.exports = {
 	ranking: ranking,
-	refreshRanking: refreshRanking
+	refreshRanking: refreshRanking,
+  isLoading: isLoading,
+  reloadHandler: reloadHandler
 }

@@ -1,4 +1,4 @@
-var ROOT_URL = "https://api.example.com/v2/";
+var ROOT_URL = "http://192.168.2.1:8080/api/";
 
 function apiFetch(path, options) {
 	var url = encodeURI(ROOT_URL + path);
@@ -21,13 +21,10 @@ function apiFetch(path, options) {
 	return fetch(url, options)
 		.then(function(response) { return response.json(); });
 }
+//get_rankin
 
 function getRanking() {
-  return {
-    result: [
-      {'name': 'Lore', 'defeats': 2}, {'name': 'Dav', 'defeats': 20}
-    ]
-  }
+	return apiFetch("get_ranking");
 }
 
 
