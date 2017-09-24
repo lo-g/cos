@@ -6,6 +6,7 @@ var isLoading = Observable(false);
 
 function refreshRanking() {
 	API.getRanking().then(function(newRanking) {
+    debug_log(newRanking['result']);
 		ranking.replaceAll(newRanking['result']);
 	});
 }
@@ -22,7 +23,6 @@ function reloadHandler(){
 }
 
 refreshRanking();
-
 
 
 module.exports = {

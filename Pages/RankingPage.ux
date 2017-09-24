@@ -1,4 +1,6 @@
 <Page ux:Class="RankingPage">
+  <Router ux:Dependency="router" />
+
   <JavaScript File="RankingPage.js" />
 
   <ScrollView SnapMinTransform="false">

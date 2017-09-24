@@ -1,0 +1,33 @@
+<Page ux:Class="SplashPage">
+  <Router ux:Dependency="router" />
+
+	<JavaScript File="SplashPage.js" />
+
+	<DockPanel ClipToBounds="true">
+		<Video Layer="Background" File="../Assets/defeat.mp4" IsLooping="true" AutoPlay="true" StretchMode="UniformToFill" Opacity="0.7" Volume="0.0">
+			<Blur Radius="4.75" />
+		</Video>
+
+		<Text Dock="Bottom" Margin="10" Opacity=".5" TextAlignment="Center" Color="White">shame of Davide &amp; Nicola</Text>
+
+		<Grid RowCount="2">
+			<StackPanel Alignment="VerticalCenter">
+				<Text Alignment="HorizontalCenter" FontSize="50">Counter</Text>
+				<Text Alignment="HorizontalCenter" FontSize="25">of</Text>
+				<Text Alignment="HorizontalCenter" FontSize="50">Shame</Text>
+
+			</StackPanel>
+			<Panel >
+
+			<CircleLayout />
+					<Button Text="Ranking"  Clicked="{goToRankingPage}" />
+<Button Text="Add new player" Clicked="{addNewPlayer}" />
+<Button Text="Update shame" Clicked="{goToRankingPage}" />
+
+
+	</Panel>
+
+
+		</Grid>
+	</DockPanel>
+</Page>

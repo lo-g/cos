@@ -1,7 +1,11 @@
 <App>
+	<Router ux:Name="router" />
 	<ClientPanel>
-		<Navigator DefaultPath="ranking">
-			<RankingPage ux:Template="ranking"/>
+		<Navigator DefaultPath="splash">
+			<!-- <RankingPage ux:Template="ranking"/> -->
+			<SplashPage ux:Template="splash" router="router"/>
+			<RankingPage ux:Template="ranking"  router="router" />
+
 	</Navigator>
 	</ClientPanel>
 </App>
