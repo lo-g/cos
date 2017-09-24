@@ -6,7 +6,6 @@ var isLoading = Observable(false);
 
 function refreshRanking() {
 	API.getRanking().then(function(newRanking) {
-    debug_log(newRanking['result']);
 		ranking.replaceAll(newRanking['result']);
 	});
 }
@@ -22,12 +21,14 @@ function reloadHandler(){
   setTimeout(endLoading, 3000);
 }
 
-refreshRanking();
-
+function activated() {
+  reloadHandler();
+}
 
 module.exports = {
 	ranking: ranking,
 	refreshRanking: refreshRanking,
   isLoading: isLoading,
-  reloadHandler: reloadHandler
+  reloadHandler: reloadHandler,
+  activated: activated
 }

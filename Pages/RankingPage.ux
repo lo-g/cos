@@ -1,6 +1,10 @@
 <Page ux:Class="RankingPage">
   <Router ux:Dependency="router" />
 
+  <Activated>
+    <Callback Handler="{activated}"/>
+  </Activated>
+
   <JavaScript File="RankingPage.js" />
 
   <ScrollView SnapMinTransform="false">
