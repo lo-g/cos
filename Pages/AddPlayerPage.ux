@@ -1,0 +1,20 @@
+<Page ux:Class="AddPlayerPage">
+  <Router ux:Dependency="router" />
+  <JavaScript File="AddPlayerPage.js" />
+
+  <DockPanel>
+
+    <Grid ColumnCount="2" Dock="Bottom"	>
+  		<Button Text="Save" Clicked="{save}" IsEnabled="{is_save_btn_enabled}" />
+  		<Button Text="Cancel" Clicked="{cancel}" />
+  	</Grid>
+
+    <Text ux:Class="TitleText"/>
+    <StackPanel>
+      <TitleText>Name:</TitleText>
+      <TextBox Value="{player_name}"/>
+    </StackPanel>
+
+  </DockPanel>
+
+</Page>

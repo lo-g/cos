@@ -4,6 +4,10 @@ function goToRankingPage() {
 	router.push("ranking");
 }
 
+function goToAddPlayerPage() {
+	router.push("add_player");
+}
+
 function addNewPlayer() {
 	API.addNewPlayer();
 }
@@ -11,5 +15,6 @@ function addNewPlayer() {
 
 module.exports = {
 	goToRankingPage: goToRankingPage,
-	addNewPlayer: addNewPlayer
+	addNewPlayer: addNewPlayer,
+	goToAddPlayerPage: goToAddPlayerPage
 };

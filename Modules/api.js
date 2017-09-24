@@ -1,4 +1,4 @@
-var ROOT_URL = "http://192.168.2.111:8080/api/";
+var ROOT_URL = "http://192.168.1.102:8080/api/";
 
 function apiFetch(path, options) {
 	var url = encodeURI(ROOT_URL + path);
@@ -22,7 +22,8 @@ function apiFetch(path, options) {
 		.then(function(response) {
 			//debug_log("resp -> " + response);
 			debug_log("response of " + url + JSON.stringify(response));
-			return response.json(); })
+			return response.json();
+		  })
 		.catch(function(err) {
 				debug_log("Exception occured " + error );
 			});
@@ -33,12 +34,12 @@ function getRanking() {
 	return apiFetch("get_ranking");
 }
 
-function addNewPlayer() {
+function addNewPlayer(name) {
 	return apiFetch("add_player", {
 		method: "POST",
 		body: {
-			name: "test 1",
-			defeats: 1
+			name: name,
+			defeats: 0
 		}
 	});
 }

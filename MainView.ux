@@ -5,6 +5,7 @@
 			<!-- <RankingPage ux:Template="ranking"/> -->
 			<SplashPage ux:Template="splash" router="router"/>
 			<RankingPage ux:Template="ranking"  router="router" />
+			<AddPlayerPage ux:Template="add_player"  router="router" />
 
 	</Navigator>
 	</ClientPanel>
