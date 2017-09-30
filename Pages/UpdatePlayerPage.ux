@@ -1,0 +1,41 @@
+<Page ux:Class="UpdatePlayerPage">
+
+  <Router ux:Dependency="router" />
+	<JavaScript File="UpdatePlayerPage.js" />
+  <Activated>
+    <Callback Handler="{activated}"/>
+  </Activated>
+
+
+  <DockPanel>
+    <Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="10">Players</Text>
+
+
+  <Grid ColumnCount="2" Dock="Bottom"	Margin="15">
+		<Button Text="Update (+1 defeat)" Clicked="{updateShame}"/>
+		<Button Text="Cancel" Clicked="{cancel}" />
+	</Grid>
+
+  <Text Value=" Add shame to: {player_name}" Dock="Bottom"	Alignment="Center" Margin="15"/>
+
+  <ScrollView>
+      <StackPanel Background="#fff">
+        <cos.Separator />
+
+        <Each Items="{ranking}">
+          <cos.Separator />
+          <Panel HitTestMode="LocalBoundsAndChildren" Clicked="{selectPlayer}">
+            <Grid ColumnCount="2" Columns="7*,3*" Margin="15">
+              <Text Value="{name}"/>
+              <Text Value="{defeats}" Alignment="Center"/>
+            </Grid>
+          </Panel>
+        </Each>
+      </StackPanel>
+  </ScrollView>
+
+
+</DockPanel>
+
+
+</Page>

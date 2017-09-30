@@ -22,7 +22,7 @@
 			<CircleLayout />
 					<Button Text="Ranking"  Clicked="{goToRankingPage}" />
 <Button Text="Add new player" Clicked="{goToAddPlayerPage}" />
-<Button Text="Update shame" Clicked="{goToRankingPage}" />
+<Button Text="Update shame" Clicked="{goToUpdatePlayerPage}" />
 
 
 	</Panel>

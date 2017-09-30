@@ -1,4 +1,8 @@
-var ROOT_URL = "http://192.168.1.102:8080/api/";
+//var ROOT_URL = "http://helpspesa.it:86/api/";
+var ROOT_URL = "http://192.168.1.200:8080/api/";
+
+
+
 
 function apiFetch(path, options) {
 	var url = encodeURI(ROOT_URL + path);
@@ -44,8 +48,20 @@ function addNewPlayer(name) {
 	});
 }
 
+function updateShame(name) {
+	return apiFetch("update_shame", {
+		method: "POST",
+		body: {
+			name: name,
+			defeats: 1
+		}
+	});
+}
+
+
 
 module.exports = {
   getRanking: getRanking,
-	addNewPlayer: addNewPlayer
+	addNewPlayer: addNewPlayer,
+	updateShame: updateShame
 };

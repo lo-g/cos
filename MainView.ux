@@ -1,11 +1,20 @@
-<App>
+<App Background="#B5BF7E">
+	<iOS.StatusBarConfig Style="Light" />
+	<Android.StatusBarConfig Color="#B5BF7E" />
 	<Router ux:Name="router" />
 	<ClientPanel>
 		<Navigator DefaultPath="splash">
-			<!-- <RankingPage ux:Template="ranking"/> -->
+			<!--
+CC8833
+FCE342
+B5BF7E
+349B99
+-->
+
 			<SplashPage ux:Template="splash" router="router"/>
 			<RankingPage ux:Template="ranking"  router="router" />
 			<AddPlayerPage ux:Template="add_player"  router="router" />
+			<UpdatePlayerPage ux:Template="update_player"  router="router" />
 
 	</Navigator>
 	</ClientPanel>
